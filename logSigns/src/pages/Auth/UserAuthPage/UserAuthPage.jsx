@@ -1,7 +1,7 @@
 import { useState } from 'react';
-import styles from './AuthPage.module.scss';
-import LoginForm from '../../components/LoginForm/LoginForm';
-import SignUpForm from '../../components/SignUpForm/SignUpForm';
+import styles from './UserAuthPage.module.scss';
+import UserLoginForm from '../../../components/Auth/User/UserLoginForm/UserLoginForm'
+import UserSignupForm from '../../../components/Auth/User/UserSignupForm/UserSignupForm'
 
 export default function AuthPage({ setUser }) {
   const [showLogin, setShowLogin] = useState(true);
@@ -12,11 +12,11 @@ export default function AuthPage({ setUser }) {
         className={styles.toggleTitle}
         onClick={() => setShowLogin(!showLogin)}
       >
-        {showLogin ? 'SIGN UP' : 'LOG IN'}
+        {showLogin ? 'USER SIGN UP' : 'USER LOG IN'}
       </h3>
 
       <div className={styles.formContainer}>
-        {showLogin ? <LoginForm setUser={setUser} /> : <SignUpForm setUser={setUser} />}
+        {showLogin ? <UserLoginForm setUser={setUser} /> : <UserSignupForm setUser={setUser} />}
       </div>
     </main>
   );

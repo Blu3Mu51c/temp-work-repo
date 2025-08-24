@@ -13,6 +13,5 @@ export default function NavBar({ user, setUser }) {
             <div className={styles.email}>{user.email}</div>
             <button className={styles.button} onClick={handleLogOut}>LOG OUT</button>
         </div>
-
     );
 }

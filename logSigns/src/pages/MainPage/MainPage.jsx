@@ -18,15 +18,6 @@ export default function MainPage({ user, setUser }) {
           </div>
         )}
 
-        {user.role === 'teacher' && (
-          <div>
-            <h2>Teacher Dashboard</h2>
-            <p>Campus A</p>
-            <p>Campus B</p>
-            <button>Request Inventory</button>
-          </div>
-        )}
-
         {user.role === 'student' && (
           <div>
             <h2>Student Dashboard</h2>

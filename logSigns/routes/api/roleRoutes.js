@@ -9,11 +9,6 @@ router.get('/admin-data', ensureLoggedIn, requireRole('admin'), (req, res) => {
   res.json({ secret: "Admin-only data" });
 });
 
-// Example route accessible by teachers and admins
-router.get('/teacher-data', ensureLoggedIn, requireRole('teacher', 'admin'), (req, res) => {
-  res.json({ secret: "Teacher or Admin data" });
-});
-
 // Example route accessible by all logged-in users
 router.get('/general-data', ensureLoggedIn, (req, res) => {
   res.json({ secret: "Accessible by any logged-in user" });
